@@ -8,6 +8,7 @@ namespace w3r_practice
         {
             //swap();
             //mod();
+            range();
         }
 
         private static void swap()
@@ -35,7 +36,21 @@ namespace w3r_practice
 
             Console.WriteLine("{0} mod {1} = {2}", a, b, a % b);
         }
-            
+
+        private static void range()
+        {
+            int a;
+
+            Console.Write("\ninput a number: ");
+            a = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine();
+
+            for (int i = 0; i < 11; i++)
+            {
+                Console.WriteLine("{0} * {1} = {2}", a, i, a * i);
+            }
+        }
+
 
     }
 }
