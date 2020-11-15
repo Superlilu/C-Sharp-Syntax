@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace w3r_practice
 {
@@ -8,7 +9,13 @@ namespace w3r_practice
         {
             //swap();
             //mod();
-            range();
+            //range();
+            //average1();
+            //fahrenheit();
+            // //index1();
+            //remove1();
+            //changepos();
+
         }
 
         private static void swap()
@@ -50,6 +57,68 @@ namespace w3r_practice
                 Console.WriteLine("{0} * {1} = {2}", a, i, a * i);
             }
         }
+        private static void average1()
+        {
+            double a, b, c, d;
+        
+            Console.Write("\ninput the 1st number: ");
+            a = Convert.ToDouble(Console.ReadLine());
+            Console.Write("\ninput the 2nd number: ");
+            b = Convert.ToDouble(Console.ReadLine());
+            Console.Write("\ninput the 3rd number: ");
+            c = Convert.ToDouble(Console.ReadLine());
+            Console.Write("\ninput the 4th number: ");
+            d = Convert.ToDouble(Console.ReadLine());
+
+            double result = (a + b + c + d) / 4;
+
+            Console.WriteLine("\nthe average of {0}, {1}, {2}, {3} is: {4}", a, b, c, d, result);
+        }
+
+        //private static void fahrenheit()
+        //{
+        //    Console.Write("\ninput the celsius: ");
+        //    int celsius = Convert.ToInt32(Console.ReadLine());
+
+        //    Console.WriteLine("Kelvin = {0}", celsius + 273);
+        //    Console.WriteLine("Fahrenheit = {0}", celsius * 18 / 10 + 32);
+        //}
+        //private static void index1()
+        //{
+        //    string text1 = "w3resource";
+        //    Console.WriteLine(remove_char("w3resouce", 1));
+        //    Console.WriteLine(remove_char(text1, 0));
+        //}
+        //public static string remove_char(string str, int n)
+        //{
+        //    return str.Remove(n, 1);
+        //}
+
+        public static void remove1()
+        {
+            string bla = "blablabla";
+            bla.Remove(4, 1);
+            bla = bla.Remove(4, 1);
+            Console.WriteLine(bla);
+
+            // Console.WriteLine(bla.Remove(4,1));
+        }
+        public static void changepos()
+        {
+            Console.Write("input a word: ");
+
+            string input1 = Console.ReadLine();
+            Console.WriteLine("the original input is: " + input1);
+
+            Console.WriteLine("after the change: " + first_last(input1));
+
+        }
+        public static string first_last(string str1)
+        {
+            return str1.Length > 1
+                ? str1.Substring(str1.Length - 1) + str1.Substring(1, str1.Length - 2) + str1.Substring(0, 1) : str1;
+        }
+
 
 
     }
