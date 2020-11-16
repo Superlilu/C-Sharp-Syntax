@@ -15,6 +15,8 @@ namespace w3r_practice
             // //index1();
             //remove1();
             //changepos();
+            //test1();
+
 
         }
 
@@ -60,7 +62,7 @@ namespace w3r_practice
         private static void average1()
         {
             double a, b, c, d;
-        
+
             Console.Write("\ninput the 1st number: ");
             a = Convert.ToDouble(Console.ReadLine());
             Console.Write("\ninput the 2nd number: ");
@@ -119,7 +121,28 @@ namespace w3r_practice
                 ? str1.Substring(str1.Length - 1) + str1.Substring(1, str1.Length - 2) + str1.Substring(0, 1) : str1;
         }
 
+        private static void test1()
+        {
 
+            Console.Write("input the first number: ");
+            int a = Convert.ToInt32(Console.ReadLine());
+            //Console.WriteLine($"the first number is: {a}");
 
+            Console.Write("\ninput the second number: ");
+            int b = Convert.ToInt32(Console.ReadLine());
+            //Console.WriteLine($"the second number is: {b}");
+
+            int c = a * b;
+
+            if (c < 0)
+            {
+                Console.WriteLine("\nCheck if one is negative and one is positive: True");
+            }
+            else
+            {
+                Console.WriteLine("False");
+            }
+
+        }
     }
 }
