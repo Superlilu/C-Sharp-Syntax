@@ -16,7 +16,10 @@ namespace w3r_practice
             //remove1();
             //changepos();
             //test1();
-
+            //longword();
+            //Console.WriteLine(longword2(""));
+            //oddnr();
+            
 
         }
 
@@ -141,6 +144,66 @@ namespace w3r_practice
             else
             {
                 Console.WriteLine("False");
+            }
+
+        }
+
+        private static bool test2(int n)
+        {
+            if (Math.Abs(n - 100) < 20 || Math.Abs(n - 200) < 20)
+                return true;
+            return false;
+        }
+
+        private static void longword()
+        {
+            string line = "Write something to test the longst word";
+            string[] words = line.Split(new[] { " " }, StringSplitOptions.None);
+
+            string word = "";
+            int ctr = 0;
+
+            foreach (String s in words)
+            {
+                if (s.Length > ctr)
+                {
+                    word = s;
+                    ctr = s.Length;
+                }
+            }
+            Console.WriteLine(word);
+        }
+
+        private static string longword2(string line)
+        {
+            Console.WriteLine("input a sentence: ");
+            line = Console.ReadLine();
+            string[] words = line.Split(new[] { " " }, StringSplitOptions.None);
+
+            string word = "";
+            int ctr = 0;
+
+            foreach (String s in words)
+            {
+                if (s.Length > ctr)
+                {
+                    word = s;
+                    ctr = s.Length;
+                }
+            }
+            Console.WriteLine("the longest word in the sentence is: " + word);
+            return word;
+        }
+
+        private static void oddnr()
+        {
+            int a;
+            for (a=1; a < 100; a++)
+            {
+                if (a%2 == 1)
+                    {
+                    Console.WriteLine(a.ToString());
+                }
             }
 
         }
