@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
+
 
 namespace w3r_practice
 {
@@ -16,13 +18,124 @@ namespace w3r_practice
             //remove1();
             //changepos();
             //test1();
-            //longword();
+            //Longword();
             //Console.WriteLine(longword2(""));
-            //oddnr();
-            
+            //Oddnr();
+            //Prime_nr();
+            //Digits2();
+            //Convert2();
+            //Convert3();
+
+            //FileInfo f = new FileInfo("D:/LiLu2020/ALTEN/Technisches Profil_Nachname_Vorname.docx");
+            //Console.WriteLine("\nSize of the file: " + f.Length.ToString());
+
+            //Hex2Dec();
+
 
         }
 
+        private static void Hex2Dec()
+        {
+            Console.WriteLine("input a Hex number: ");
+            string hexnr = Console.ReadLine();
+
+            int decnr = int.Parse(hexnr, System.Globalization.NumberStyles.HexNumber);
+
+            Console.WriteLine("the decimal number is: " + decnr);
+        }
+
+        private static void Convert3()
+        {
+            Console.WriteLine("input a sentence: ");
+            string line = Console.ReadLine();
+
+            string result = "";
+
+            List<string> wordsList = new List<string>();
+            string[] words = line.Split(new [] { " " }, StringSplitOptions.None);
+
+            for (int i = words.Length -1; i >= 0; i--)
+            {
+                result += words[i] + " ";
+            }
+            wordsList.Add(result);
+            foreach (String s in wordsList)
+            {
+                Console.WriteLine("\nReverse String: " + s);
+            }
+
+        }
+
+        private static void Convert2()
+        {
+            Console.WriteLine("input a sentence: ");
+            string lines = Console.ReadLine();
+            //string lines2 = Console.ReadLine();
+
+            string words = "";
+            string[] words2 = lines.Split(new [] { " " }, StringSplitOptions.None);
+
+            int i;
+            for (i = 0; i < words2.Length; ++i)
+                {
+                words += words2[words2.Length -1 - i] + " ";
+            }
+
+            Console.WriteLine(words);
+        }
+
+        private static int Digits2()
+        {
+            
+            Console.WriteLine("input a integer: ");
+            string a = Console.ReadLine();
+
+            int i;
+            int sum = 0;
+            for (i = 0; i < a.Length; i++)
+            {
+                sum += a[i] - '0';
+            }
+            
+            Console.WriteLine(sum);
+            return sum;
+        }
+
+        private static void Prime_nr()
+        {
+            Console.WriteLine("\nthe sum of the first 500 prime numbers: ");
+            long sum = 0;
+            int ctr = 0;
+            int n = 2;
+
+            while (ctr < 500)
+            {
+                if (isPrime(n))
+                {
+                    sum += n;
+                    ctr++;
+                }
+                n++;
+            }
+            Console.WriteLine(sum.ToString());
+        }
+        public static bool isPrime(int n)
+        {
+            int x = (int)Math.Floor(Math.Sqrt(n));
+
+            if (n == 1)
+                return false;
+            if (n == 2)
+                return true;
+
+            for (int i = 2; i <= x; ++i)
+            {
+                if (n % i == 0)
+                    return false;
+
+            }
+            return true;
+        }
         private static void swap()
         {
             int a, b, temp;
@@ -174,7 +287,7 @@ namespace w3r_practice
             Console.WriteLine(word);
         }
 
-        private static string longword2(string line)
+        private static string Longword2(string line)
         {
             Console.WriteLine("input a sentence: ");
             line = Console.ReadLine();
@@ -195,17 +308,19 @@ namespace w3r_practice
             return word;
         }
 
-        private static void oddnr()
+        private static void Oddnr()
         {
             int a;
-            for (a=1; a < 100; a++)
+            for (a = 1; a < 100; a++)
             {
-                if (a%2 == 1)
-                    {
+                if (a % 2 == 1)
+                {
                     Console.WriteLine(a.ToString());
                 }
             }
 
         }
+
     }
+    
 }
