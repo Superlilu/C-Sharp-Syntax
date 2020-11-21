@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Text;
 using System.IO;
 
 
@@ -29,7 +31,143 @@ namespace w3r_practice
             //FileInfo f = new FileInfo("D:/LiLu2020/ALTEN/Technisches Profil_Nachname_Vorname.docx");
             //Console.WriteLine("\nSize of the file: " + f.Length.ToString());
 
+            //while (true)
+
             //Hex2Dec();
+            //MultiArray();
+            //Copies();
+            //Multiple();
+            //StartWith();
+            //CheckRange();
+            //CheckHP();
+            //Compare3();
+            //NearNr();
+            ThreeTimeW();
+        }
+
+        private static void ThreeTimeW()
+        {
+            Console.WriteLine("input a string that contains at least one 'w' char: ");
+            string str = Console.ReadLine();
+
+            int count = str.Count(s => s == 'w');
+            Console.WriteLine("Test the string contains 'w' 1-3 times?");
+            Console.WriteLine(count >= 1 && count <= 3);
+
+        }
+        
+        private static void NearNr()
+        {
+            Console.WriteLine("Check which Nr. is near to 20");
+
+            Console.WriteLine("\nInput first interger: ");
+            int x = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("\nInput 2nd interger: ");
+            int y = Convert.ToInt32(Console.ReadLine());
+
+            int a = Math.Abs(x - 20);
+            int b = Math.Abs(y - 20);
+
+            Console.WriteLine("\nthe nr that is near to 20 is: ");
+            Console.WriteLine(a == b ? 0: (a < b ? x: y));
+            // Console.WriteLine(a == b ? 0: (a < b ? x: y));
+        }
+
+        private static void Compare3()
+        {
+            Console.WriteLine("\n Input first interger: ");
+            int x = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("\n Input 2nd interger: ");
+            int y = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("\n Input 3rd interger: ");
+            int z = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Largest of three: " + Math.Max(x, Math.Max(y,z)));
+            Console.WriteLine("Smallest of three: " + Math.Min(x, Math.Min(y, z)));
+        }
+
+        private static void CheckHP()
+        {
+            Console.WriteLine("input a string: ");
+            string str = Console.ReadLine();
+
+            Console.WriteLine((str.Substring(1, 2).Equals("HP")) ? str.Remove(1, 2) : str);
+            // str.Substring(0,1,2)
+            // str.Equals("ABC")
+            // str.Remove(0,1)
+        }
+
+        private static void CheckRange()
+        {
+            Console.WriteLine("input an integer: ");
+            int a = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("input another interger: ");
+            int b = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine((a > -10 && a < 10) || (b > -10 && b < 10));
+            //equal →  Console.WriteLine((a > -10 && a < 10) || (b > -10 && b < 10)? "True" : "False")
+        }
+
+        private static void StartWith()
+        {
+            Console.WriteLine("input a sentence: ");
+            string line = Console.ReadLine();
+            Console.WriteLine("check if the sentence start with Hello:");
+
+            string[] words = line.Split(new[] { " " }, StringSplitOptions.None);
+
+            if (words[0] == "Hello")
+            {
+                Console.WriteLine("True");
+            } 
+            else
+            {
+                Console.WriteLine("False");
+            }    
+        }
+
+        private static void Multiple()
+        {
+            Console.WriteLine("input a positive number: ");
+            int a = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("check if the nr. is a multiple of 3 or 7: ");
+            Console.WriteLine((a % 3 == 0 || a % 7 == 0) ? "yes" : "no");
+        }
+
+        private static void Copies()
+        {
+            Console.WriteLine("input a sentence: ");
+            string str = Console.ReadLine();
+
+            Console.WriteLine(str.Length < 4 ? str: str.Substring(str.Length-4) + str.Substring(str.Length-4));
+            //str.Substring(i)  → start from i, continues to the end
+        }
+
+        private static void MultiArray()
+        {
+            int[] a = { 1, 3, -5, 4 };
+            int[] b = { 1, 4, -5, -2 };
+
+            //int[] c = {a[0] * b[0], a[1] * b[1], a[2] * b[2], a[3] * b[3]};
+            //Console.WriteLine(c[0]);
+
+            ////int[] c = new int[4];
+
+            //for (int i = 0; i < 4; i++)
+            //{
+            //    Console.Write(a[i] * b[i] + " ");
+            //}
+
+            int i = 0;
+            while (true)
+            {
+                if (!(i < 4))
+                    break;
+                Console.Write(a[i] * b[i] + " ");
+                i++;
+
+            }
 
 
         }
