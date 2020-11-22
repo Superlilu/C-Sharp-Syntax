@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.IO;
+using System.Threading.Tasks;
 
 
 namespace w3r_practice
@@ -31,8 +32,6 @@ namespace w3r_practice
             //FileInfo f = new FileInfo("D:/LiLu2020/ALTEN/Technisches Profil_Nachname_Vorname.docx");
             //Console.WriteLine("\nSize of the file: " + f.Length.ToString());
 
-            //while (true)
-
             //Hex2Dec();
             //MultiArray();
             //Copies();
@@ -42,7 +41,160 @@ namespace w3r_practice
             //CheckHP();
             //Compare3();
             //NearNr();
-            ThreeTimeW();
+            //ThreeTimeW();
+            //Upper();
+
+            //Console.WriteLine("input a string: ");
+            //string str2 = Console.ReadLine();
+            //Console.WriteLine(Test4(str2));
+
+            //while (true)
+            //Test5();
+
+            // num[0].Equals(nums[nums.Length-1]); → (True/False)
+
+            //Rotate();
+            //Compare4();
+
+            //int[] nums = { 2, 4, 5, 7, 13 };
+            //Console.WriteLine("array is: {0}", string.Join(", ", nums));
+            //Console.WriteLine("Check if the array contains an odd nr: " + Oddnr(nums));
+
+            //Cencury();
+
+            //Console.WriteLine(Convert.ToString(Century2(1900)));          
+            //Console.WriteLine(CheckPalidrome("abba"));
+            //Console.WriteLine("\"aa\""); 
+            //Console.WriteLine("'aa'");
+
+
+        }
+
+        public static bool CheckPalidrome(string str)
+        {
+            char[] c = str.ToCharArray();
+            //str.ToCharArray();
+            return new string(c).Equals(str);
+            // new string(c).Equals(str)
+        }
+
+        public static int Century2(int year)
+        {
+            return (int)(year / 100) + ((year % 100 == 0) ? 0 : 1);
+        }
+
+        private static void Cencury()
+        {
+            Console.WriteLine("input a year: ");
+            int a = Convert.ToInt32(Console.ReadLine());
+
+            int b = a / 100 + 1;
+
+            Console.WriteLine("the century of the year {0} is {1}", a, b);
+        }
+
+        private static bool Oddnr(int[] nums)
+        {
+
+
+            foreach ( int x in nums)
+            {
+                if (x % 2 == 0)
+                    return true;
+            }
+            return false;
+
+        }
+
+        private static void Compare4()
+        {
+            int[] num = { 8, 3, 6, 10, 2, 7};
+            Console.WriteLine("\nArray is: [{0}]", string.Join(", ", num));
+            int a = num[0];
+
+            for (int i = 0; i < num.Length-1; i++)
+            {
+                if (num[i+1] > a)
+                {
+                    a = num[i + 1];
+                }
+              
+            }
+            Console.WriteLine($"the biggst nr. is: {a}");
+        }
+
+        private static void Rotate()
+        {
+            int[] num = { 1, 2, 8 };
+            Console.WriteLine("\n Array1: [{0}]", string.Join(", ", num));
+            // string.Join("separator", array);
+            var temp = num[0];
+            for (int i = 0; i < num.Length - 1; i++)
+            {
+                num[i] = num[i + 1];
+            }
+            num[num.Length - 1] = temp;
+            Console.WriteLine("\n After Rotating the new array bekomes: [{0}]", string.Join(", ", num));
+        }
+
+        private static void Test5()
+        {
+            int[] nums = {1, 2, 3, 4, 5, 4, 3, 6, 4, 8, 3, 2};
+            Console.WriteLine("Array: [{0}]", string.Join("; ", nums));
+            // string.Join(",", nums)
+
+            //string[] line2 = new[] { "" };
+            //String line3 = new String("");
+            string line2 = "";
+            for (int i = 0; i < nums.Length; ++i)
+            {
+                char a = (char)(nums[i] + '0');
+                // char a = (char) (nums[i] + '0'); → explizit convert to char: (char)
+                line2 += a + " ";
+            }
+            Console.WriteLine(line2);
+
+            Console.WriteLine("input an integer: ");
+
+            int x = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Number of " + x + " present in the said array: ");
+            Console.WriteLine(nums.Count(s => s == x));
+            //Console.WriteLine(nums.Count(s => s == x));
+        }
+
+
+
+        public static bool Test4(string str2)
+        {
+            int ctr = 0;
+            for (int i = 0; i < str2.Length - 1; i++)
+            {
+                if (str2[i].Equals('w'))
+                {
+                    ctr++;
+                }
+                if (str2.Substring(i, 2).Equals("ww") && ctr > 2)
+                {
+                return true;
+                }
+            }
+            return false;
+        }
+
+        private static void Upper()
+        {
+            Console.WriteLine("input a string: ");
+            string str = Console.ReadLine();
+
+            if (str.Length < 4)
+            {
+                Console.WriteLine(str.ToUpper());
+            }    
+            else
+            {
+                Console.WriteLine(str.Substring(0, 4).ToLower() + str.Substring(4, str.Length - 4));
+            }
+
         }
 
         private static void ThreeTimeW()
