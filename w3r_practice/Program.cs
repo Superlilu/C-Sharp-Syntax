@@ -5,6 +5,26 @@ using System.Text;
 using System.IO;
 using System.Threading.Tasks;
 
+struct Books
+{
+    public string title;
+    public string author;
+    public int book_id;
+
+    public void SetValue(string t, string a, int id)
+    {
+        title = t;
+        author = a;
+        book_id = id;
+
+    }
+    public void Display()
+    {
+        Console.WriteLine("title: {0}", title);
+        Console.WriteLine("author: " + author);
+        Console.WriteLine($"book_id is {book_id}");
+    }
+}
 
 namespace w3r_practice
 {
@@ -66,8 +86,169 @@ namespace w3r_practice
             //Console.WriteLine(CheckPalidrome("abba"));
             //Console.WriteLine("\"aa\""); 
             //Console.WriteLine("'aa'");
+            //Array1();
+            //String1();
+            //String2();
+
+            ////Books Book1;
+
+            ////Book1.title = "C Sharp Tutorial";
+            ////Book1.author = "anonym";
+            ////Book1.book_id = 645821;
+
+            ////Console.WriteLine("Book 1 title: " + Book1.title);
+            ////Console.WriteLine("Book 1 ID: {0}", Book1.book_id);
+            ////Console.ReadKey();
+
+            //Books Book1 = new Books();
+            //Book1.SetValue("C Sharp", "Anonym", 35487);
+            //Book1.Display();
+
+            // enum Day = { Mon, Thu, Wen, Thur, Fri, Sat, Sun};
+
+            //Console.WriteLine(Test(1, 2));
+            
+            //while (true)
+            Console.WriteLine(Test7("C#1"));
+            Console.ReadLine();
+        }
 
 
+
+        public static bool Test7(string s)
+        {
+            return (s.Length < 3 && s.Equals("C#") || (s.StartsWith("C#") && s[2] == ' '));
+        }
+
+        public static string TestStr6(string s)
+        {
+            if (s.Length < 3)
+            {
+                return s + s + s;
+            }
+            else
+            {
+                string x = s.Substring(0, 3);
+                return x + s + x;
+            }
+
+        }
+
+        public static bool Test6(int x)
+        {
+            return x % 3 == 0 || x % 7 == 0;
+        }
+
+        public static string TestStr5(string s)
+        {
+            //char c = s[s.Length - 1];
+            string c = s.Substring(s.Length - 1);
+            return c + s + c;
+     
+        }
+        public static string TestStr4(string s)
+        {
+            return s.Length < 2 ? s : s.Substring(0, 2) + s.Substring(0,2);
+        }
+
+
+        public static string TestStr3(string s)
+        {
+            return s.Length > 1 ? s.Substring(s.Length-1) + s.Substring(1, s.Length-2) + s.Substring(0,1) : s;
+        }
+
+        public static string TestStr2(string s, int n)
+        {
+            return s.Remove(n, 1);
+        }
+        public static string TestStr(string s)
+        {
+            if (s.Length > 2 && s.Substring(0, 2) == "if")
+                return s;
+            return "if " + s;
+        }
+
+        public static bool Test10(int x)
+        {
+            if (Math.Abs(x - 100) <= 10 || Math.Abs(x - 200) <= 10)
+                return true;
+            return false;
+        }
+
+        public static bool Test30(int x, int y)
+        {
+            return x == 30 || y == 30 || (x + y == 30);
+        }
+
+        public static int Test_50(int n)
+        {
+            const int x = 50;
+            if (n > x)
+            {
+                return (n - x);
+            }
+            return (x - n) * 3;
+        }
+
+        public static int Test(int x, int y)
+        {
+            return x == y ? (x + y) * 3 : x + y;
+        }
+        private static void String1()
+        {
+            //just explain
+            char[] letters = {'H', 'e', 'l', 'l', 'o' };
+            string greetings = new string(letters); // 构造函数
+
+            string[] sarray = { "Helle", "from", "Peking" };
+            string message = string.Join(" ", sarray);
+
+            DateTime waiting = new DateTime(2020, 11, 23, 12, 35, 59);
+            string chat = String.Format("Message sent at {0:t} on {0:D}");
+
+        }
+
+        private static void String2()
+        {
+            // just to explain
+            string line = "its a sample of a string";
+            string linex = "its just a text";
+            String.Compare(line, linex);
+            string.Concat(line, linex); // connect several obj
+            line.Contains("test");
+            line.EndsWith("abc");
+            line.Equals("abc");
+            string.Equals("ab", "bc");
+            line.Insert(3, "hi");
+            string.IsNullOrEmpty(line);
+            line.Remove(3, 5);
+            line.Replace('a', 'b');
+            line.Replace("sample", "e.g.");
+            line.Split(new[] { " " }, StringSplitOptions.None);
+            line.ToCharArray();
+            line.TrimEnd();
+            line.ToUpper();
+            string.Copy(line); //obsolete
+            //line.CopyTo(2, 's', 3, 4);
+
+
+
+        }
+
+        private static void Array1()
+        {
+            // only to explain the array
+            double[] balance = new double[10]; // ini. the array
+            balance[1] = 3.25;
+            //
+            double[] balance1 = { 1, 2, 1.3, 2.5 };
+            //
+            int[] nums = new int[5] { 1, 5, 7, 4, 2 }; // without 5 is also ok: new int[] {1, 3, 4, 5, 3};
+            int[] nums2 = nums;
+            // all the components in a int [] will be initialised as 0
+
+            // to explain the visit of array members
+            DateTime a = new DateTime();
         }
 
         public static bool CheckPalidrome(string str)

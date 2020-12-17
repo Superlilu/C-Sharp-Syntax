@@ -1,0 +1,13 @@
+D:\C-Sharp-Syntax\OOP_Konzept\obj\Debug\netcoreapp3.1\OOP_Konzept.csprojAssemblyReference.cache
+D:\C-Sharp-Syntax\OOP_Konzept\obj\Debug\netcoreapp3.1\OOP_Konzept.AssemblyInfoInputs.cache
+D:\C-Sharp-Syntax\OOP_Konzept\obj\Debug\netcoreapp3.1\OOP_Konzept.AssemblyInfo.cs
+D:\C-Sharp-Syntax\OOP_Konzept\obj\Debug\netcoreapp3.1\OOP_Konzept.csproj.CoreCompileInputs.cache
+D:\C-Sharp-Syntax\OOP_Konzept\bin\Debug\netcoreapp3.1\OOP_Konzept.exe
+D:\C-Sharp-Syntax\OOP_Konzept\bin\Debug\netcoreapp3.1\OOP_Konzept.deps.json
+D:\C-Sharp-Syntax\OOP_Konzept\bin\Debug\netcoreapp3.1\OOP_Konzept.runtimeconfig.json
+D:\C-Sharp-Syntax\OOP_Konzept\bin\Debug\netcoreapp3.1\OOP_Konzept.runtimeconfig.dev.json
+D:\C-Sharp-Syntax\OOP_Konzept\bin\Debug\netcoreapp3.1\OOP_Konzept.dll
+D:\C-Sharp-Syntax\OOP_Konzept\bin\Debug\netcoreapp3.1\OOP_Konzept.pdb
+D:\C-Sharp-Syntax\OOP_Konzept\obj\Debug\netcoreapp3.1\OOP_Konzept.dll
+D:\C-Sharp-Syntax\OOP_Konzept\obj\Debug\netcoreapp3.1\OOP_Konzept.pdb
+D:\C-Sharp-Syntax\OOP_Konzept\obj\Debug\netcoreapp3.1\OOP_Konzept.genruntimeconfig.cache
