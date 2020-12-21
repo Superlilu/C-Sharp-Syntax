@@ -1,28 +1,109 @@
 ﻿using System;
 
-namespace Kap4_4
+namespace Kap4_8
 {
-    public abstract class A
+    public interface IDraw
     {
-        public abstract void Start();
-
+        void Graf();
     }
 
-    //public sealed class B : A   //class sealed: class can not be inherated
-    public class B : A
+    public class GeometricObject
     {
-        //public sealed override void Start()  // methode sealed: method can not be overrided
-        public override void Start()
+        public GeometricObject()
         {
-            Console.WriteLine("start B");
+
+        }
+
+        public virtual void Start()
+        {
+            Console.WriteLine("it's a GeometricObject");
         }
     }
 
-    public class C : B 
+    public class Circle : GeometricObject
     {
+
+        public Circle()
+        {
+
+        }
+        
         public override void Start()
         {
-            Console.WriteLine("start C");
+            Console.WriteLine("it's a Circle");
+        }
+
+        public int Radius { get; set; }
+        
+        public virtual void Eigenschaft1(int c)
+        {
+            Radius = c;
+        }
+
+    }
+
+    public class GraficCircle : Circle, IDraw
+    {
+        public GraficCircle()
+        {
+
+        }
+
+        public override void Eigenschaft1(int c)
+        {
+            base.Eigenschaft1(c);
+            double Area1 = Math.Pow(c, 2) * Math.PI;
+            Console.WriteLine("the Area of the Circle is: {0}", Area1);
+        }
+
+        public void Graf()
+        {
+            Console.WriteLine("draw the grafic in the instance of circle");
+        }
+    }
+
+    public class Rectangle : GeometricObject
+    {
+        public Rectangle()
+        {
+
+        }
+
+        public override void Start()
+        {
+            Console.WriteLine("it's a Rectangle");
+        }
+
+        public int Length {get; set;}
+        public int Width { get; set; }
+
+        public virtual void Eigenschaft2(int x, int y)
+        {
+            Length = x;
+            Width = y;
+        }
+
+    }
+
+    public class GraficRectangle : Rectangle, IDraw
+    {
+        public GraficRectangle()
+        {
+
+        }
+
+        public int Area2 { get; set; }
+        public override void Eigenschaft2(int x, int y)
+        {
+            base.Eigenschaft2(x, y);
+            Area2 = x * y;
+            Console.WriteLine("the Area of the Rectangle is: {0}", Area2);
+        }
+
+        
+        public void Graf()
+        {
+            Console.WriteLine("draw the grafic in instanz of rectangle");
         }
     }
 
@@ -31,18 +112,66 @@ namespace Kap4_4
     {
         static void Main(string[] args)
         {
-            A ab = new B();
-            ab.Start();
-            B bc = new C();
-            bc.Start();
+            GraficRectangle r = new GraficRectangle();
+            r.Eigenschaft2(3, 5);
+            r.Graf();
 
-            Int32 a;
-            a.ToString();
+            Console.WriteLine("\n");
+
+            GraficCircle c = new GraficCircle();
+            c.Eigenschaft1(10);
+            c.Graf();
+
+            Console.WriteLine(typeof(string).Assembly.ImageRuntimeVersion);
+          
+
         }
     }
-
-
 }
+
+//namespace Kap4_4
+//{
+//    public abstract class A
+//    {
+//        public abstract void Start();
+
+//    }
+
+//    //public sealed class B : A   //class sealed: class can not be inherated
+//    public class B : A
+//    {
+//        //public sealed override void Start()  // methode sealed: method can not be overrided
+//        public override void Start()
+//        {
+//            Console.WriteLine("start B");
+//        }
+//    }
+
+//    public class C : B 
+//    {
+//        public override void Start()
+//        {
+//            Console.WriteLine("start C");
+//        }
+//    }
+
+
+//    public class Test
+//    {
+//        static void Main(string[] args)
+//        {
+//            A ab = new B();
+//            ab.Start();
+//            B bc = new C();
+//            bc.Start();
+
+//            //Int32 a;
+//            //a.ToString();
+//        }
+//    }
+
+
+//}
 
 
 //namespace Jicheng

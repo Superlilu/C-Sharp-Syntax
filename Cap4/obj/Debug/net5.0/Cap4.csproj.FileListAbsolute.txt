@@ -1,0 +1,16 @@
+D:\C-Sharp-Syntax\Cap4\bin\Debug\net5.0\Cap4.exe
+D:\C-Sharp-Syntax\Cap4\bin\Debug\net5.0\Cap4.deps.json
+D:\C-Sharp-Syntax\Cap4\bin\Debug\net5.0\Cap4.runtimeconfig.json
+D:\C-Sharp-Syntax\Cap4\bin\Debug\net5.0\Cap4.runtimeconfig.dev.json
+D:\C-Sharp-Syntax\Cap4\bin\Debug\net5.0\Cap4.dll
+D:\C-Sharp-Syntax\Cap4\bin\Debug\net5.0\ref\Cap4.dll
+D:\C-Sharp-Syntax\Cap4\bin\Debug\net5.0\Cap4.pdb
+D:\C-Sharp-Syntax\Cap4\obj\Debug\net5.0\Cap4.csprojAssemblyReference.cache
+D:\C-Sharp-Syntax\Cap4\obj\Debug\net5.0\Cap4.GeneratedMSBuildEditorConfig.editorconfig
+D:\C-Sharp-Syntax\Cap4\obj\Debug\net5.0\Cap4.AssemblyInfoInputs.cache
+D:\C-Sharp-Syntax\Cap4\obj\Debug\net5.0\Cap4.AssemblyInfo.cs
+D:\C-Sharp-Syntax\Cap4\obj\Debug\net5.0\Cap4.csproj.CoreCompileInputs.cache
+D:\C-Sharp-Syntax\Cap4\obj\Debug\net5.0\Cap4.dll
+D:\C-Sharp-Syntax\Cap4\obj\Debug\net5.0\ref\Cap4.dll
+D:\C-Sharp-Syntax\Cap4\obj\Debug\net5.0\Cap4.pdb
+D:\C-Sharp-Syntax\Cap4\obj\Debug\net5.0\Cap4.genruntimeconfig.cache
