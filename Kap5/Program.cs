@@ -1,6 +1,7 @@
 ﻿#define MYDEBUG
 #define TEST
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,24 +9,137 @@ using System.Threading.Tasks;
 using System.IO;
 using System.Diagnostics;
 
-namespace Kap7_3
+namespace Kap8_2
 {
-    class Program2
+    public class Person : IComparable
     {
+        public string Name { get; set; }
+        public string City { get; set; }
+
+        public int CompareTo(object obj)
+        {
+            if (obj == null) return 1;
+            Person per = obj as Person;
+            if (per != null)
+                return Name.CompareTo(per.Name);
+            throw new ArgumentException("Objekt ist nicht vom Typ Person");
+        }
+    }
+    public class Programm
+    {
+        static void ShowSortedList(ArrayList list)
+        {
+            foreach (Person item in list)
+                if (item != null)
+                {
+                    Console.Write($"Name: {item.Name,-12}");
+                    Console.WriteLine($"City: {item.City}");
+                }
+        }
         static void Main(string[] args)
         {
-            int x = 10;
-            int y = 23;
-            int z = x + y;
-            DebugTestProc();
-            Console.Write(z);
-        }
-        static void DebugTestProc()
-        {
-            Console.WriteLine("In DebugTestProc");
+            ArrayList person = new ArrayList();
+            person.Add(new Person() { Name = "Lily", City = "Xingyang"});
+            person.Add(new Person() { Name = "Peiren", City = "Qingyang" });
+            person.Add(new Person() { Name = "Lily2", City = "Xingyang2" });
+            person.Add(new Person() { Name = "Someone", City = "Somewhere" });
+
+            Console.WriteLine("list before Sort: ");
+            ShowSortedList(person);
+
+            Console.WriteLine("\nlist after Sort: ");
+            person.Sort();
+            ShowSortedList(person);
+
+            Person[] replace = new Person[4];
+            person.CopyTo(replace);
+
+            Console.WriteLine("\nnew list:");
+            foreach (Person item in replace)
+            {
+                Console.WriteLine("Name: {0,-12}City: {1}", item.Name, item.City);
+            }
+
+            Console.WriteLine("\ntry Adapter");
+            ArrayList liste = ArrayList.Adapter(replace);
+            liste.Sort();
+            liste.Reverse();
+            ShowSortedList(liste);
+
+            Console.WriteLine("\noriginal Array after Adapter-action");
+            foreach (Person item in replace)
+            {
+                Console.WriteLine("Name: {0,-12}City: {1}", item.Name, item.City);
+            }
+
+
+            //ArrayList a = new ArrayList();
+            //a.Add("ab");
+            //a.Add("bc");
+
+            //string[] x = { "cd", "de", "ef", "fg", "gh"};
+            //a.AddRange(x);
+            //a.Remove(a[2]);
+            //a.RemoveAt(3);
+
+            //a.Sort();
+            //string[] b = new string[a.Count+2];
+            //a.CopyTo(b, 2);
+
+            //int Count = 0;
+
+            //foreach(string item in b)
+            //{
+            //    Console.WriteLine(item);
+            //    ++Count;
+            //}
+
+            //Console.WriteLine(Count);
+
+
+            //ArrayList a = new ArrayList();
+            ////int index1 = a.Add(3);
+            ////int index2 = a.Add(5);
+            //a.Add(3);
+            //a.Add(5);
+
+            //int[] x = { 2, 4, 6, 8, 10 };
+            //a.AddRange(x);
+            //a.Remove(a[1]);
+
+            //a.Sort();
+            //int[] b = new int[a.Count + 2];
+            //a.CopyTo(b, 2);
+
+            //foreach (int item in b)
+            //{
+            //    Console.WriteLine(item.ToString());
+            //}
+
+
         }
     }
 }
+
+//namespace Kap7_3
+//{
+//    class Program2
+//    {
+//        static void Main(string[] args)
+//        {
+//            int x = 10;
+//            int y = 23;
+//            int z = x + y;
+//            //DebugTestProc();
+//            //Console.Write(z);
+//            Console.WriteLine(4.CompareTo(7));
+//        }
+//        static void DebugTestProc()
+//        {
+//            Console.WriteLine("In DebugTestProc");
+//        }
+//    }
+//}
 
 //namespace Kap7_1
 //{
