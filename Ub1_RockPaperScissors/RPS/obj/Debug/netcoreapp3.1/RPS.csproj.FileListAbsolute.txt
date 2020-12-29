@@ -1,0 +1,13 @@
+D:\C-Sharp-Syntax\Ub1_RockPaperScissors\RPS\bin\Debug\netcoreapp3.1\RPS.exe
+D:\C-Sharp-Syntax\Ub1_RockPaperScissors\RPS\bin\Debug\netcoreapp3.1\RPS.deps.json
+D:\C-Sharp-Syntax\Ub1_RockPaperScissors\RPS\bin\Debug\netcoreapp3.1\RPS.runtimeconfig.json
+D:\C-Sharp-Syntax\Ub1_RockPaperScissors\RPS\bin\Debug\netcoreapp3.1\RPS.runtimeconfig.dev.json
+D:\C-Sharp-Syntax\Ub1_RockPaperScissors\RPS\bin\Debug\netcoreapp3.1\RPS.dll
+D:\C-Sharp-Syntax\Ub1_RockPaperScissors\RPS\bin\Debug\netcoreapp3.1\RPS.pdb
+D:\C-Sharp-Syntax\Ub1_RockPaperScissors\RPS\obj\Debug\netcoreapp3.1\RPS.csprojAssemblyReference.cache
+D:\C-Sharp-Syntax\Ub1_RockPaperScissors\RPS\obj\Debug\netcoreapp3.1\RPS.AssemblyInfoInputs.cache
+D:\C-Sharp-Syntax\Ub1_RockPaperScissors\RPS\obj\Debug\netcoreapp3.1\RPS.AssemblyInfo.cs
+D:\C-Sharp-Syntax\Ub1_RockPaperScissors\RPS\obj\Debug\netcoreapp3.1\RPS.csproj.CoreCompileInputs.cache
+D:\C-Sharp-Syntax\Ub1_RockPaperScissors\RPS\obj\Debug\netcoreapp3.1\RPS.dll
+D:\C-Sharp-Syntax\Ub1_RockPaperScissors\RPS\obj\Debug\netcoreapp3.1\RPS.pdb
+D:\C-Sharp-Syntax\Ub1_RockPaperScissors\RPS\obj\Debug\netcoreapp3.1\RPS.genruntimeconfig.cache
