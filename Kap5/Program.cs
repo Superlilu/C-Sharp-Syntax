@@ -50,11 +50,12 @@ namespace Kap9_8
     {
         static void Main(string[] args)
         {
-            Test a = new Test(3);
-            Test b = new Test(1);
+            Console.WriteLine("Test");
+            //Test a = new Test(3);
+            //Test b = new Test(1);
 
-            Console.WriteLine(a + b);
-            Console.WriteLine(Test.AddTwoInstances(a, b));
+            //Console.WriteLine(a + b);
+            //Console.WriteLine(Test.AddTwoInstances(a, b));
             //Dictionary<string, Person> liste2 = new Dictionary<string, Person>();
             //Person per1 = new Person("Ara", 1001);
             //Person per2 = new Person("Bill", 1002);
