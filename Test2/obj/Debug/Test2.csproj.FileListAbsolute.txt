@@ -1,0 +1,15 @@
+D:\C-Sharp-Syntax\Test2\bin\Debug\Test2.exe.config
+D:\C-Sharp-Syntax\Test2\bin\Debug\Test2.exe
+D:\C-Sharp-Syntax\Test2\bin\Debug\Test2.pdb
+D:\C-Sharp-Syntax\Test2\obj\Debug\Test2.csprojAssemblyReference.cache
+D:\C-Sharp-Syntax\Test2\obj\Debug\MainWindow.g.cs
+D:\C-Sharp-Syntax\Test2\obj\Debug\App.g.cs
+D:\C-Sharp-Syntax\Test2\obj\Debug\Test2_MarkupCompile.cache
+D:\C-Sharp-Syntax\Test2\obj\Debug\Test2_MarkupCompile.lref
+D:\C-Sharp-Syntax\Test2\obj\Debug\MainWindow.baml
+D:\C-Sharp-Syntax\Test2\obj\Debug\Test2.g.resources
+D:\C-Sharp-Syntax\Test2\obj\Debug\Test2.Properties.Resources.resources
+D:\C-Sharp-Syntax\Test2\obj\Debug\Test2.csproj.GenerateResource.cache
+D:\C-Sharp-Syntax\Test2\obj\Debug\Test2.csproj.CoreCompileInputs.cache
+D:\C-Sharp-Syntax\Test2\obj\Debug\Test2.exe
+D:\C-Sharp-Syntax\Test2\obj\Debug\Test2.pdb

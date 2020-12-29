@@ -1,0 +1,10 @@
+D:\C-Sharp-Syntax\Test\bin\Debug\Test.exe.config
+D:\C-Sharp-Syntax\Test\bin\Debug\Test.exe
+D:\C-Sharp-Syntax\Test\bin\Debug\Test.pdb
+D:\C-Sharp-Syntax\Test\obj\Debug\Test.csprojAssemblyReference.cache
+D:\C-Sharp-Syntax\Test\obj\Debug\Test.Form1.resources
+D:\C-Sharp-Syntax\Test\obj\Debug\Test.Properties.Resources.resources
+D:\C-Sharp-Syntax\Test\obj\Debug\Test.csproj.GenerateResource.cache
+D:\C-Sharp-Syntax\Test\obj\Debug\Test.csproj.CoreCompileInputs.cache
+D:\C-Sharp-Syntax\Test\obj\Debug\Test.exe
+D:\C-Sharp-Syntax\Test\obj\Debug\Test.pdb

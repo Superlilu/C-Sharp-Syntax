@@ -9,117 +9,407 @@ using System.Threading.Tasks;
 using System.IO;
 using System.Diagnostics;
 
-namespace Kap8_2
+namespace Kap9_8
 {
-    public class Person : IComparable
+    public class Person
     {
         public string Name { get; set; }
-        public string City { get; set; }
-
-        public int CompareTo(object obj)
+        public int Nr { get; set; }
+        public Person(string name, int nr)
         {
-            if (obj == null) return 1;
-            Person per = obj as Person;
-            if (per != null)
-                return Name.CompareTo(per.Name);
-            throw new ArgumentException("Objekt ist nicht vom Typ Person");
+            Name = name;
+            Nr = nr;
+        }
+
+        public override string ToString()
+        {
+            return Name.ToString() + Nr.ToString();
         }
     }
+
+    public class Test
+    {
+        public Test(int a)
+        {
+            _t = a;
+        }
+        private int _t;
+        public static int operator +(Test a, Test b)
+        {
+            return a._t + b._t;
+            //return a._t - b._t;
+        }
+
+        public static int AddTwoInstances(Test a, Test b)
+        {
+            return a._t + b._t;
+        }
+    }
+
     public class Programm
     {
-        static void ShowSortedList(ArrayList list)
-        {
-            foreach (Person item in list)
-                if (item != null)
-                {
-                    Console.Write($"Name: {item.Name,-12}");
-                    Console.WriteLine($"City: {item.City}");
-                }
-        }
         static void Main(string[] args)
         {
-            ArrayList person = new ArrayList();
-            person.Add(new Person() { Name = "Lily", City = "Xingyang"});
-            person.Add(new Person() { Name = "Peiren", City = "Qingyang" });
-            person.Add(new Person() { Name = "Lily2", City = "Xingyang2" });
-            person.Add(new Person() { Name = "Someone", City = "Somewhere" });
+            Test a = new Test(3);
+            Test b = new Test(1);
 
-            Console.WriteLine("list before Sort: ");
-            ShowSortedList(person);
+            Console.WriteLine(a + b);
+            Console.WriteLine(Test.AddTwoInstances(a, b));
+            //Dictionary<string, Person> liste2 = new Dictionary<string, Person>();
+            //Person per1 = new Person("Ara", 1001);
+            //Person per2 = new Person("Bill", 1002);
+            //Person per3 = new Person("Cindy", 1003);
+            //liste2.Add(per1.Name, per1);
+            //liste2.Add(per2.Name, per2);
+            //liste2.Add(per3.Name, per3);
 
-            Console.WriteLine("\nlist after Sort: ");
-            person.Sort();
-            ShowSortedList(person);
-
-            Person[] replace = new Person[4];
-            person.CopyTo(replace);
-
-            Console.WriteLine("\nnew list:");
-            foreach (Person item in replace)
-            {
-                Console.WriteLine("Name: {0,-12}City: {1}", item.Name, item.City);
-            }
-
-            Console.WriteLine("\ntry Adapter");
-            ArrayList liste = ArrayList.Adapter(replace);
-            liste.Sort();
-            liste.Reverse();
-            ShowSortedList(liste);
-
-            Console.WriteLine("\noriginal Array after Adapter-action");
-            foreach (Person item in replace)
-            {
-                Console.WriteLine("Name: {0,-12}City: {1}", item.Name, item.City);
-            }
-
-
-            //ArrayList a = new ArrayList();
-            //a.Add("ab");
-            //a.Add("bc");
-
-            //string[] x = { "cd", "de", "ef", "fg", "gh"};
-            //a.AddRange(x);
-            //a.Remove(a[2]);
-            //a.RemoveAt(3);
-
-            //a.Sort();
-            //string[] b = new string[a.Count+2];
-            //a.CopyTo(b, 2);
-
-            //int Count = 0;
-
-            //foreach(string item in b)
+            //foreach (KeyValuePair<string, Person> item in liste2)
             //{
-            //    Console.WriteLine(item);
-            //    ++Count;
-            //}
-
-            //Console.WriteLine(Count);
-
-
-            //ArrayList a = new ArrayList();
-            ////int index1 = a.Add(3);
-            ////int index2 = a.Add(5);
-            //a.Add(3);
-            //a.Add(5);
-
-            //int[] x = { 2, 4, 6, 8, 10 };
-            //a.AddRange(x);
-            //a.Remove(a[1]);
-
-            //a.Sort();
-            //int[] b = new int[a.Count + 2];
-            //a.CopyTo(b, 2);
-
-            //foreach (int item in b)
-            //{
-            //    Console.WriteLine(item.ToString());
+            //    Console.WriteLine(item.Value.Name + item.Value.Nr);
             //}
 
 
+
+            //Console.WriteLine("-----------------------------");
+
+            //foreach (KeyValuePair<string, Person> item in liste2)
+            //{
+            //    Console.WriteLine(item.Value);
+            //    //Console.WriteLine(item.Value.ToString());
+            //}
+
+
+
+            //List<Person> liste = new List<Person>();
+            //liste.Add(new Person() { Name = "Ara", Nr = 1001 });
+            //liste.Add(new Person() { Name = "Bill", Nr = 1002 });
+            //liste.Add(new Person() { Name = "Cindy", Nr = 1003 });
+
+            //foreach (Person per in liste)
+            //{
+            //    Console.WriteLine($"liste contains the person {per.Name} with the Nr. {per.Nr}");
+            //}
         }
+
     }
 }
+
+//namespace Kap9_2
+//{
+    //public class Demo
+    //{
+    //    public Demo()
+    //    {
+
+    //    }
+        
+    //    public static void Add<T>(T a, T b)
+    //    {
+    //        Console.WriteLine("execute adding {0} and {1}", a, b);
+    //        Console.WriteLine($"the typ of a is: {a.GetType()}");
+    //        //int x = 5;
+    //        //Type n = typeof(Int32);
+    //        Console.WriteLine("the value of the a: {0}", a);
+    //    }
+    //}
+
+    //public class Demo<T, K>
+    //{
+    //    public Demo(T t, K k)
+    //    {
+    //        Value = t;
+    //        Feature = k;
+    //    }
+    //    private T Value;
+    //    private K Feature;
+    //    public void Add(Demo<T, K> d)
+    //    {
+    //        Console.WriteLine("execute adding {0} and {1}", Value, d.Value);
+    //        Console.WriteLine($"the typ of K is: {Feature.GetType()}");
+    //        //int x = 5;
+    //        //Type n = typeof(Int32);
+    //        Console.WriteLine("the value of the Feature: {0}", d.Feature);
+    //    }
+
+    //    public void Minus(Demo<T, K> d) => Console.WriteLine("execute minus {0} and {1}", Value, d.Value);
+    //}
+
+    //public class Test
+    //{
+    //    static void Main(string[] args)
+    //    {
+    //        int x = 4;
+    //        int y = 5;
+    //        Demo.Add(x, y);
+    //        Console.WriteLine();
+
+    //        string m = "apple";
+    //        string n = "orange";
+    //        Demo.Add(m, n);
+    //        Console.WriteLine();
+
+    //        Demo.Add<string>(m, n);
+    //        //Demo.Add<string>(x, y);  // unexcepted types will not be accepted
+
+            //---------------------------------
+            //Demo<string, int> demo = new Demo<string, int>("test", 5);
+            //Demo<string, int> demo1 = new Demo<string, int>("Test1", 5);
+            //Demo<string, string> demo2 = new Demo<string, string>("test2", "Test22");
+            //Demo<string, string> demo3 = new Demo<string, string>("test3", "Test33");
+            //demo.Add(demo1);
+//            //Console.WriteLine();
+//            //demo2.Add(demo3);
+//        }
+//    }
+
+//}
+
+//namespace Kap8_2_5
+//{
+//    //public class Handy
+//    //{
+//    //    public string Name { get; set; }
+//    //    public int Nr { get; set; }
+//    //    public Handy(string name, int nr)
+//    //    {
+//    //        Name = name;
+//    //        Nr = nr;
+//    //    }
+//    //}
+
+    
+//    //public class Person : IComparable
+//    //{
+//    //    public string Name { get; set; }
+//    //    public string City { get; set; }
+
+//    //    public int CompareTo(object obj)
+//    //    {
+//    //        if (obj == null) return 1;
+//    //        Person per = obj as Person;
+//    //        if (per != null)
+//    //            return Name.CompareTo(per.Name);
+//    //        throw new ArgumentException("Objekt ist nicht vom Typ Person");
+//    //    }
+//    //}
+//    public class Programm
+//    {
+//        //static void ShowSortedList(ArrayList list)
+//        //{
+//        //    foreach (Person item in list)
+//        //        if (item != null)
+//        //        {
+//        //            Console.Write($"Name: {item.Name,-12}");
+//        //            Console.WriteLine($"City: {item.City}");
+//        //        }
+//        //}
+//        //---------------------------------
+
+//        public class Seasons : IEnumerable
+//        {
+//            string[] seasons = new string[] { "spring", "summer", "autum", "winter" };
+
+//            public IEnumerator GetEnumerator()
+//            {
+//                yield return seasons[0];
+//                yield return seasons[1];
+//                yield return seasons[2];
+//                yield return seasons[3];
+//            }
+
+//            //public IEnumerator GetEnumerator()
+//            //{
+//            //    for(int i = 0; i < seasons.Length; i++)
+//            //    {
+//            //        Console.WriteLine("in class Seasons: ");
+//            //        yield return seasons[i];
+//            //    }
+//            //}
+//        }
+//        static void Main(string[] args)
+//        {
+//            Seasons s = new Seasons();
+//            foreach(string item in s)
+//            {
+//                Console.WriteLine("in Main: ");
+//                Console.WriteLine(item + "\n");
+//            }
+
+
+//            //----------------------------------------------
+//            //int[] arr = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+//            //Queue myQueue = new Queue();
+//            //foreach(int x in arr)
+//            //{
+//            //    myQueue.Enqueue(x);
+//            //}
+
+//            //Console.WriteLine("the members of the Queue: ");
+//            ////myQueue.Clear();
+//            ////int c = myQueue.Count;
+//            ////Console.WriteLine("\n" + c);
+//            //while (myQueue.Count != 0)
+//            //{
+//            //    Console.Write("{0,-2}", myQueue.Dequeue());
+//            //}
+//            //int c = myQueue.Count;
+//            //Console.WriteLine("\n" + c);
+
+//            //--------------------------------------------------
+//            //foreach (int a in arr)
+//            //{
+//            //    Console.Write(a + " ");
+//            //}
+
+//            //Stack myStack = new Stack(9);
+//            //Console.WriteLine("\n\npush elements into myStack");
+//            //foreach (int a in arr)
+//            //{
+//            //    myStack.Push(a);
+//            //    Console.WriteLine("push element {0} in myStack.", a);
+//            //}
+
+//            ////myStack.Pop();
+//            ////myStack.Pop();
+//            ////int x = myStack.Count;
+//            ////Console.WriteLine(x);
+
+
+//            //Console.WriteLine("\n\npop all elements from myStack:");
+
+
+//            //while (myStack.Count != 0)
+//            //{
+//            //    Console.WriteLine("element {0} is poped from myStack.", myStack.Pop());
+//            //}
+
+
+
+
+//            ////Hashtable hash = new Hashtable();
+//            ////hash.Add("Alex", 1001);
+//            ////hash.Add("Bill", 1002);
+//            //hash.Add("Cindi", 1003);
+//            //hash.Add("Dora", 1004);
+
+//            //foreach(string item in hash.Keys)
+//            //{
+//            //    Console.WriteLine(item);
+//            //}
+
+//            //Console.WriteLine();
+//            //foreach(int item in hash.Values)
+//            //{
+//            //    Console.WriteLine(item);
+//            //}
+
+//            //Console.WriteLine();
+//            //foreach(DictionaryEntry item in hash)
+//            //{
+//            //    Console.WriteLine("Name: {0,-8}HandyNr.: {1}", item.Key, item.Value);
+//            //}
+
+//            //Console.WriteLine("input a probe/test key: ");
+//            //string t = Console.ReadLine();
+
+//            ////bool b = hash.Contains(t) ? true : false;
+
+//            ////Console.Write{the }
+//            //string s = (hash.Contains(t) ? "hash contains the key {0}" : "hash doesn't contain the key {0}");
+//            //Console.WriteLine(s, t);
+
+//            //Console.WriteLine("input a Handynr.: ");
+//            //int h = Convert.ToInt32(Console.ReadLine());
+
+//            //string s2 = (hash.ContainsValue(h) ? "hash contains the value {0}" : "hash doesn't contain the value {0}");
+//            //Console.WriteLine(s2, h);
+
+
+//            //---------------------------------------------------------------------------------------
+
+//            //ArrayList person = new ArrayList();
+//            //person.Add(new Person() { Name = "Lily", City = "Xingyang"});
+//            //person.Add(new Person() { Name = "Peiren", City = "Qingyang" });
+//            //person.Add(new Person() { Name = "Lily2", City = "Xingyang2" });
+//            //person.Add(new Person() { Name = "Someone", City = "Somewhere" });
+
+//            //Console.WriteLine("list before Sort: ");
+//            //ShowSortedList(person);
+
+//            //Console.WriteLine("\nlist after Sort: ");
+//            //person.Sort();
+//            //ShowSortedList(person);
+
+//            //Person[] replace = new Person[4];
+//            //person.CopyTo(replace);
+
+//            //Console.WriteLine("\nnew list:");
+//            //foreach (Person item in replace)
+//            //{
+//            //    Console.WriteLine("Name: {0,-12}City: {1}", item.Name, item.City);
+//            //}
+
+//            //Console.WriteLine("\ntry Adapter");
+//            //ArrayList liste = ArrayList.Adapter(replace);
+//            //liste.Sort();
+//            //liste.Reverse();
+//            //ShowSortedList(liste);
+
+//            //Console.WriteLine("\noriginal Array after Adapter-action");
+//            //foreach (Person item in replace)
+//            //{
+//            //    Console.WriteLine("Name: {0,-12}City: {1}", item.Name, item.City);
+//            //}
+
+
+//            //ArrayList a = new ArrayList();
+//            //a.Add("ab");
+//            //a.Add("bc");
+
+//            //string[] x = { "cd", "de", "ef", "fg", "gh"};
+//            //a.AddRange(x);
+//            //a.Remove(a[2]);
+//            //a.RemoveAt(3);
+
+//            //a.Sort();
+//            //string[] b = new string[a.Count+2];
+//            //a.CopyTo(b, 2);
+
+//            //int Count = 0;
+
+//            //foreach(string item in b)
+//            //{
+//            //    Console.WriteLine(item);
+//            //    ++Count;
+//            //}
+
+//            //Console.WriteLine(Count);
+
+//            //------------------------------------------------------------------------
+
+//            //ArrayList a = new ArrayList();
+//            ////int index1 = a.Add(3);
+//            ////int index2 = a.Add(5);
+//            //a.Add(3);
+//            //a.Add(5);
+
+//            //int[] x = { 2, 4, 6, 8, 10 };
+//            //a.AddRange(x);
+//            //a.Remove(a[1]);
+
+//            //a.Sort();
+//            //int[] b = new int[a.Count + 2];
+//            //a.CopyTo(b, 2);
+
+//            //foreach (int item in b)
+//            //{
+//            //    Console.WriteLine(item.ToString());
+//            //}
+
+
+//        }
+//    }
+//}
 
 //namespace Kap7_3
 //{
