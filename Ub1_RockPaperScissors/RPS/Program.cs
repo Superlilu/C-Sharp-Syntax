@@ -99,12 +99,23 @@ namespace RPS
                 }
                 Count++;
             }
+            //catch (InvalidNumberException ex)
+            //{
+            //    Console.WriteLine(ex.Message);
+            //}
             catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);
-            }  
+            }
         }
     }
+
+    //public class InvalidNumberException : Exception
+    //{
+    //    public InvalidNumberException() : base("invalid number!the number must be between 1 - 3!")
+    //    {
+    //    }
+    //}
 
     class Program
     {
