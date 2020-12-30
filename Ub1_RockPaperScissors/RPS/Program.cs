@@ -31,66 +31,78 @@ namespace RPS
             const int MAX = 4;
 
             int returnValue = RandomNumber(MIN, MAX);
-            if ((int)a > 3 || (int)a < 1)
+
+            try
             {
-                Console.WriteLine("unvalid number! the number must be between 1 - 3!");
-            }
- 
-            if (returnValue == 1)
-            {
-                Console.WriteLine("the Computer choses Rock.");
-                switch (a)
+                if (returnValue == 1)
                 {
-                    case Role.Rock:
-                        Console.WriteLine("You also chose Rock, you tied!");
-                        break;
-                    case Role.Paper:
-                        Console.WriteLine("You chose Paper, you win!");
-                        Uscore++;
-                        break;
-                    case Role.Scissors:
-                        Console.WriteLine("You chose Scissors, you lose!");
-                        Cscore++;
-                        break;
+                    Console.WriteLine("the Computer choses Rock.");
+                    switch (a)
+                    {
+                        case Role.Rock:
+                            Console.WriteLine("You also chose Rock, you tied!");
+                            break;
+                        case Role.Paper:
+                            Console.WriteLine("You chose Paper, you win!");
+                            Uscore++;
+                            break;
+                        case Role.Scissors:
+                            Console.WriteLine("You chose Scissors, you lose!");
+                            Cscore++;
+                            break;
+                        default:
+                            throw new Exception("unvalid number!the number must be between 1 - 3!");
+                             
+
+                    }
                 }
-            }
-            else if (returnValue == 2)
-            {
-                Console.WriteLine("the Computer choses Paper.");
-                switch ((Role)a)
+                else if (returnValue == 2)
                 {
-                    case Role.Rock:
-                        Console.WriteLine("You chose Rock, you lose!");
-                        Cscore++;
-                        break;
-                    case Role.Paper:
-                        Console.WriteLine("You also chose Paper, you tied!");
-                        break;
-                    case Role.Scissors:
-                        Console.WriteLine("You chose Scissors, you win!");
-                        Uscore++;
-                        break;
+                    Console.WriteLine("the Computer choses Paper.");
+                    switch ((Role)a)
+                    {
+                        case Role.Rock:
+                            Console.WriteLine("You chose Rock, you lose!");
+                            Cscore++;
+                            break;
+                        case Role.Paper:
+                            Console.WriteLine("You also chose Paper, you tied!");
+                            break;
+                        case Role.Scissors:
+                            Console.WriteLine("You chose Scissors, you win!");
+                            Uscore++;
+                            break;
+                        default:
+                            throw new Exception("unvalid number!the number must be between 1 - 3!");
+                    }
                 }
-            }
-            else //(returnValue == 3)
-            {
-                Console.WriteLine("the Computer choses Scissors.");
-                switch (a)
+                else //(returnValue == 3)
                 {
-                    case Role.Rock:
-                        Console.WriteLine("You chose Rock, you win!");
-                        Uscore++;
-                        break;
-                    case Role.Paper:
-                        Console.WriteLine("You chose Paper, you lose!");
-                        Cscore++;
-                        break;
-                    case Role.Scissors:
-                        Console.WriteLine("You chose Scissors, you tied!");
-                        break;
+                    Console.WriteLine("the Computer choses Scissors.");
+                    switch (a)
+                    {
+                        case Role.Rock:
+                            Console.WriteLine("You chose Rock, you win!");
+                            Uscore++;
+                            break;
+                        case Role.Paper:
+                            Console.WriteLine("You chose Paper, you lose!");
+                            Cscore++;
+                            break;
+                        case Role.Scissors:
+                            Console.WriteLine("You chose Scissors, you tied!");
+                            break;
+                        default:
+                            throw new Exception("invalid number!the number must be between 1 - 3!");
+                            // turn into catich after "trow Exception": Count ++ will not be executed!
+                    }
                 }
+                Count++;
             }
-            Count++;
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }  
         }
     }
 
