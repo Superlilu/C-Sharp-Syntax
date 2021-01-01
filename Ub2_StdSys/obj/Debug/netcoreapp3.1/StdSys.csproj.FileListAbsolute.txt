@@ -1,0 +1,13 @@
+D:\C-Sharp-Syntax\Ub2_StdSys\bin\Debug\netcoreapp3.1\StdSys.exe
+D:\C-Sharp-Syntax\Ub2_StdSys\bin\Debug\netcoreapp3.1\StdSys.deps.json
+D:\C-Sharp-Syntax\Ub2_StdSys\bin\Debug\netcoreapp3.1\StdSys.runtimeconfig.json
+D:\C-Sharp-Syntax\Ub2_StdSys\bin\Debug\netcoreapp3.1\StdSys.runtimeconfig.dev.json
+D:\C-Sharp-Syntax\Ub2_StdSys\bin\Debug\netcoreapp3.1\StdSys.dll
+D:\C-Sharp-Syntax\Ub2_StdSys\bin\Debug\netcoreapp3.1\StdSys.pdb
+D:\C-Sharp-Syntax\Ub2_StdSys\obj\Debug\netcoreapp3.1\StdSys.csprojAssemblyReference.cache
+D:\C-Sharp-Syntax\Ub2_StdSys\obj\Debug\netcoreapp3.1\StdSys.AssemblyInfoInputs.cache
+D:\C-Sharp-Syntax\Ub2_StdSys\obj\Debug\netcoreapp3.1\StdSys.AssemblyInfo.cs
+D:\C-Sharp-Syntax\Ub2_StdSys\obj\Debug\netcoreapp3.1\StdSys.csproj.CoreCompileInputs.cache
+D:\C-Sharp-Syntax\Ub2_StdSys\obj\Debug\netcoreapp3.1\StdSys.dll
+D:\C-Sharp-Syntax\Ub2_StdSys\obj\Debug\netcoreapp3.1\StdSys.pdb
+D:\C-Sharp-Syntax\Ub2_StdSys\obj\Debug\netcoreapp3.1\StdSys.genruntimeconfig.cache

@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<UserList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Listtype>UserSystem</Listtype>
+  <UserArray>
+    <User>
+      <Username>Lily</Username>
+      <Password>1617</Password>
+    </User>
+    <User>
+      <Username>Peiren</Username>
+      <Password>1217</Password>
+    </User>
+  </UserArray>
+</UserList>
