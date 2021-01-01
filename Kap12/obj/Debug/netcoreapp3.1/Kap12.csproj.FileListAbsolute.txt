@@ -1,0 +1,13 @@
+D:\C-Sharp-Syntax\Kap12\bin\Debug\netcoreapp3.1\Kap12.exe
+D:\C-Sharp-Syntax\Kap12\bin\Debug\netcoreapp3.1\Kap12.deps.json
+D:\C-Sharp-Syntax\Kap12\bin\Debug\netcoreapp3.1\Kap12.runtimeconfig.json
+D:\C-Sharp-Syntax\Kap12\bin\Debug\netcoreapp3.1\Kap12.runtimeconfig.dev.json
+D:\C-Sharp-Syntax\Kap12\bin\Debug\netcoreapp3.1\Kap12.dll
+D:\C-Sharp-Syntax\Kap12\bin\Debug\netcoreapp3.1\Kap12.pdb
+D:\C-Sharp-Syntax\Kap12\obj\Debug\netcoreapp3.1\Kap12.AssemblyInfoInputs.cache
+D:\C-Sharp-Syntax\Kap12\obj\Debug\netcoreapp3.1\Kap12.AssemblyInfo.cs
+D:\C-Sharp-Syntax\Kap12\obj\Debug\netcoreapp3.1\Kap12.csproj.CoreCompileInputs.cache
+D:\C-Sharp-Syntax\Kap12\obj\Debug\netcoreapp3.1\Kap12.dll
+D:\C-Sharp-Syntax\Kap12\obj\Debug\netcoreapp3.1\Kap12.pdb
+D:\C-Sharp-Syntax\Kap12\obj\Debug\netcoreapp3.1\Kap12.genruntimeconfig.cache
+D:\C-Sharp-Syntax\Kap12\obj\Debug\netcoreapp3.1\Kap12.csprojAssemblyReference.cache
