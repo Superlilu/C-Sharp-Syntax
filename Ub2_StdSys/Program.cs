@@ -141,12 +141,11 @@ namespace StdSys
             while (tl.TestIfLog() == false)
             {
             }
-            
 
-            //FileStream fs2 = new FileStream("StdSys.xml", FileMode.Open);
-            //UserList newUsers = (UserList)serializer.Deserialize(fs2);
-            //serializer.Serialize(Console.Out, newUsers);
-            //Console.ReadLine();
+            FileStream fs2 = new FileStream("StdSys.xml", FileMode.Open);
+            UserList newUsers = (UserList)serializer.Deserialize(fs2);
+            serializer.Serialize(Console.Out, newUsers);
+            Console.ReadLine();
 
 
 
