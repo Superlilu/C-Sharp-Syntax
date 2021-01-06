@@ -5,13 +5,22 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Test2"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="YAMS" Height="450" Width="800" WindowStartupLocation="Manual">
     <Grid>
         <Button Content="Button" HorizontalAlignment="Right" Margin="0,0,147,57" VerticalAlignment="Bottom" Width="113" Click="Button_Click" Height="36"/>
         <TextBox x:Name="tbox1" HorizontalAlignment="Left" Height="23" Margin="143,218,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <TextBox x:Name="tbox2" HorizontalAlignment="Left" Height="23" Margin="143,259,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <Label Content="Number 1" HorizontalAlignment="Left" Margin="75,218,0,0" VerticalAlignment="Top"/>
         <Label Content="Number 2" HorizontalAlignment="Left" Margin="75,255,0,0" VerticalAlignment="Top"/>
+        <ListBox HorizontalAlignment="Left" Height="100" Margin="399,118,0,0" VerticalAlignment="Top" Width="100">
+            <ListBoxItem Content="hgfhgf"/>
+            <ListBoxItem Content="hgjghfjghfd"/>
+        </ListBox>
+        <ComboBox x:Name="c1" HorizontalAlignment="Left" Margin="203,114,0,0" VerticalAlignment="Top" Width="120">
+            <ComboBoxItem Content="gdfgfd"/>
+            <ComboBoxItem Content="uiztzizu"/>
+        </ComboBox>
+        <DatePicker HorizontalAlignment="Left" Margin="600,218,0,0" VerticalAlignment="Top"/>
 
     </Grid>
 </Window>

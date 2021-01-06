@@ -1,0 +1,13 @@
+D:\C-Sharp-Syntax\Kap22\obj\Debug\netcoreapp3.1\Kap22.csprojAssemblyReference.cache
+D:\C-Sharp-Syntax\Kap22\obj\Debug\netcoreapp3.1\Kap22.AssemblyInfoInputs.cache
+D:\C-Sharp-Syntax\Kap22\obj\Debug\netcoreapp3.1\Kap22.AssemblyInfo.cs
+D:\C-Sharp-Syntax\Kap22\obj\Debug\netcoreapp3.1\Kap22.csproj.CoreCompileInputs.cache
+D:\C-Sharp-Syntax\Kap22\bin\Debug\netcoreapp3.1\Kap22.exe
+D:\C-Sharp-Syntax\Kap22\bin\Debug\netcoreapp3.1\Kap22.deps.json
+D:\C-Sharp-Syntax\Kap22\bin\Debug\netcoreapp3.1\Kap22.runtimeconfig.json
+D:\C-Sharp-Syntax\Kap22\bin\Debug\netcoreapp3.1\Kap22.runtimeconfig.dev.json
+D:\C-Sharp-Syntax\Kap22\bin\Debug\netcoreapp3.1\Kap22.dll
+D:\C-Sharp-Syntax\Kap22\bin\Debug\netcoreapp3.1\Kap22.pdb
+D:\C-Sharp-Syntax\Kap22\obj\Debug\netcoreapp3.1\Kap22.dll
+D:\C-Sharp-Syntax\Kap22\obj\Debug\netcoreapp3.1\Kap22.pdb
+D:\C-Sharp-Syntax\Kap22\obj\Debug\netcoreapp3.1\Kap22.genruntimeconfig.cache

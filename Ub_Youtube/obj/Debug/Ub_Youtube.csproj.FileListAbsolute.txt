@@ -1,0 +1,15 @@
+D:\C-Sharp-Syntax\Ub_Youtube\bin\Debug\Ub_Youtube.exe.config
+D:\C-Sharp-Syntax\Ub_Youtube\bin\Debug\Ub_Youtube.exe
+D:\C-Sharp-Syntax\Ub_Youtube\bin\Debug\Ub_Youtube.pdb
+D:\C-Sharp-Syntax\Ub_Youtube\obj\Debug\Ub_Youtube.csprojAssemblyReference.cache
+D:\C-Sharp-Syntax\Ub_Youtube\obj\Debug\MainWindow.g.cs
+D:\C-Sharp-Syntax\Ub_Youtube\obj\Debug\App.g.cs
+D:\C-Sharp-Syntax\Ub_Youtube\obj\Debug\Ub_Youtube_MarkupCompile.cache
+D:\C-Sharp-Syntax\Ub_Youtube\obj\Debug\Ub_Youtube_MarkupCompile.lref
+D:\C-Sharp-Syntax\Ub_Youtube\obj\Debug\MainWindow.baml
+D:\C-Sharp-Syntax\Ub_Youtube\obj\Debug\Ub_Youtube.g.resources
+D:\C-Sharp-Syntax\Ub_Youtube\obj\Debug\Ub_Youtube.Properties.Resources.resources
+D:\C-Sharp-Syntax\Ub_Youtube\obj\Debug\Ub_Youtube.csproj.GenerateResource.cache
+D:\C-Sharp-Syntax\Ub_Youtube\obj\Debug\Ub_Youtube.csproj.CoreCompileInputs.cache
+D:\C-Sharp-Syntax\Ub_Youtube\obj\Debug\Ub_Youtube.exe
+D:\C-Sharp-Syntax\Ub_Youtube\obj\Debug\Ub_Youtube.pdb

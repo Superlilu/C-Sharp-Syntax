@@ -1,0 +1,24 @@
+﻿<Window x:Class="StdSys_WPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:StdSys_WPF"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <DockPanel LastChildFill="False">
+            <GroupBox Header="LogIn" Width="670" Height="245" RenderTransformOrigin="0.492,0.503">
+                <Grid Margin="40,0,27,0" Height="181">
+                    <Label x:Name="User_name" Content="User name" HorizontalAlignment="Left" Margin="33,32,0,0" VerticalAlignment="Top"/>
+                    <Label x:Name="Password" Content="Password" HorizontalAlignment="Left" Margin="33,63,0,0" VerticalAlignment="Top"/>
+                    <TextBox x:Name="User_name1" HorizontalAlignment="Left" Margin="175,35,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="356" Height="20"/>
+                    <PasswordBox x:Name="PasswordBox" HorizontalAlignment="Left" Margin="175,70,0,0" VerticalAlignment="Top" Width="356" Height="20"/>
+                    <Button x:Name="LogButton" Content="Log in" HorizontalAlignment="Left" Margin="353,136,0,0" VerticalAlignment="Top" Width="59" Click="LogButton_Click"/>
+                    <Button x:Name="ExitButton" Content="Exit" HorizontalAlignment="Left" Margin="445,136,0,0" VerticalAlignment="Top" Width="44" Click="ExitButton_Click"/>
+                </Grid>
+            </GroupBox>
+        </DockPanel>
+
+    </Grid>
+</Window>

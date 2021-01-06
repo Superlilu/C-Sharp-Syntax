@@ -27,8 +27,23 @@ namespace Test2
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            int result = Convert.ToInt32(tbox1.Text) + Convert.ToInt32(tbox2.Text);
-            MessageBox.Show("sum is: " + result.ToString());
+            string message = "Möchten sie die Daten speichern?";
+            MessageBoxResult result = MessageBox.Show(message,
+                                                        "Meine Anwendung",
+                                                        MessageBoxButton.YesNoCancel,
+                                                        MessageBoxImage.Question,
+                                                        MessageBoxResult.Yes);
+
+            if (result == MessageBoxResult.Yes)
+            {
+                MessageBox.Show("you pressed Yes",
+                                "Meine Anwendung",
+                                MessageBoxButton.OK,
+                                MessageBoxImage.Hand,
+                                MessageBoxResult.OK);
+            }
+            //int result = Convert.ToInt32(tbox1.Text) + Convert.ToInt32(tbox2.Text);
+            //MessageBox.Show("sum is: " + result.ToString());
         }
     }
 }
