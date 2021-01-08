@@ -49,12 +49,6 @@ namespace StdSys_WPF
             this.Username = username;
             this.Pw = pw;
         }
-        //public void TestUser()
-        //{
-        //    User[] TestUsers = new User[2];
-        //    TestUsers[0] = new User("Lily", "1617");
-        //    TestUsers[1] = new User("Peiren", "1217");
-        //}
 
     }
     public class Student : User
@@ -62,15 +56,27 @@ namespace StdSys_WPF
         [XmlElement("Name")]
         public string Name;
         [XmlElement("ClassNo")]
-        public string ClassNo;
+        public int ClassNo;
         [XmlArray("SelectedCourses")]
         [XmlArrayItem("SelectedCourse")]
-        public Courses[] SelCourses;
+        public Courses[] CoursesPerStudent;
 
         public Student(string name, string pw) : base(name, pw)
         {
             this.Name = name;
             this.Pw = pw;
+            this.ClassNo = 5;
+        }
+        public Courses[] AddCourse(Courses c)
+        {
+            CoursesPerStudent = new Courses[] { };
+            CoursesPerStudent.Append(c);
+            CoursesPerStudent.OrderBy(c => c.Course);
+            return CoursesPerStudent;
+        }
+        public override string ToString()
+        {
+            return Name;
         }
     }
 
@@ -90,89 +96,80 @@ namespace StdSys_WPF
     }
     public class Courses
     {
+        [XmlElement("Course")]
+        public string Course;
         [XmlElement("Teacher")]
         public string Teacher;
         [XmlArray("StudentArr")]
         [XmlArrayItem("Student")]
-        public Student[] Students;
-        [XmlElement("Credit")]
-        public int Credit;
+        public Student[] StudentInCourse;
+        [XmlElement("CourseCredit")]
+        public int CourseCredit;
 
-        public Courses(string teacher, int credit)
+        public Courses(string course, string teacher, int credit)
         {
+            this.Course = course;
             this.Teacher = teacher;
-            this.Credit = credit;
+            this.CourseCredit = credit;
         }
-    }
-
-    public class TestLog
-    {
-        public TestLog()
+        public Courses()
         {
-
+            this.Course = "";
+            this.Teacher = "";
+            this.CourseCredit = 0;
         }
-        public bool TestIfLog()
+        public Student[] AddStudent(Student s)
         {
-            Console.WriteLine("please input your Username: ");
-            string testName = Console.ReadLine();
-            Console.WriteLine("please input your Password: ");
-            string testPw = Console.ReadLine();
+            StudentInCourse = new Student[] { };
+            StudentInCourse.Append(s);
+            StudentInCourse.OrderBy(s => s.Name);
+            return StudentInCourse;
+        }
 
-            User[] TestUsers = new User[2];
-            TestUsers[0] = new User("Lily", "1617");
-            TestUsers[1] = new User("Peiren", "1217");
-
-            if (Array.Exists(TestUsers, Item => Item.Username == testName && Item.Pw == testPw))
-            {
-                Console.WriteLine("seccessfully logged in!");
-                return true;
-            }
-            else
-            {
-                Console.WriteLine("failed to log in. Please try another Username or Password.\n");
-                return false;
-            }
-
+        public override string ToString()
+        {
+            return Course;
         }
     }
     public partial class MainWindow : Window
     {
-        private User[] TestUsers;
+        //Courses[] allCourses = new Courses[6];
+        List<Courses> allCourses = new List<Courses>();
+        List<Student> Studenten = new List<Student>();
         public MainWindow()
         {
             
             InitializeComponent();
 
-            TestUsers = new User[2];
-            TestUsers[0] = new User("Lily", "1617");
-            TestUsers[1] = new User("Peiren", "1217");
+            Studenten.Add(new Student("Lily", "1617"));
+            Studenten.Add(new Student("Peiren", "1217"));
 
-            //UserList List = new UserList("UserSystem");
-            //List.Listtype = "UserSystem";
-            //User[] TestUsers = new User[2];
-            //TestUsers[0] = new User("Lily", "1617");
-            //TestUsers[1] = new User("Peiren", "1217");
-            //List.Users = TestUsers;
+            allCourses.Add(new Courses("Chemie", "Oli", 5));
+            allCourses.Add(new Courses("Mathe", "Jan", 5));
+            allCourses.Add(new Courses("Physik", "Lisa", 5));
+            allCourses.Add(new Courses("Mechanik", "Peter", 5));
+            allCourses.Add(new Courses("Robotik", "Roos", 5));
+            allCourses.Add(new Courses("Produktion", "Roos", 5));
 
-            //XmlSerializer serializer = new XmlSerializer(typeof(UserList));
-            //FileStream fs = new FileStream("StdSys.xml", FileMode.Create);
-            //serializer.Serialize(fs, List);
-            //fs.Close();
+            //Courses c1 = new Courses("Chemie", "Oli", 5);
+            //Courses c2 = new Courses("Mathe", "Jan", 5);
+            //Courses c3 = new Courses("Physik", "Lisa", 5);
+            //Courses c4 = new Courses("Mechanik", "Peter", 5);
+            //Courses c5 = new Courses("Robotik", "Roos", 5);
+            //Courses c6 = new Courses("Produktion", "Roos", 5);
+            //allCourses.Append(c1);
+            //allCourses.Append(c2);
+            //allCourses.Append(c3);
+            //allCourses.Append(c4);
+            //allCourses.Append(c5);
+            //allCourses.Append(c6);
+            allCourses.OrderBy(c1 => c1.Course);
 
-            //TestLog tl = new TestLog();
-            //while (tl.TestIfLog() == false)
-            //{
-            //}
-
-            //FileStream fs2 = new FileStream("StdSys.xml", FileMode.Open);
-            //UserList newUsers = (UserList)serializer.Deserialize(fs2);
-            //serializer.Serialize(Console.Out, newUsers);
-            //Console.ReadLine();
         }
 
         private void ExitButton_Click(object sender, RoutedEventArgs e)
         {
-            MessageBoxResult x = MessageBox.Show("do you really want to exit?", "Wow", MessageBoxButton.YesNo, MessageBoxImage.Question);
+            MessageBoxResult x = MessageBox.Show("do you really want to exit?", "Exit", MessageBoxButton.YesNo, MessageBoxImage.Question);
             if (MessageBoxResult.Yes == x)
             {
                 Application.Current.Shutdown();
@@ -182,15 +179,23 @@ namespace StdSys_WPF
         }
 
         private void LogButton_Click(object sender, RoutedEventArgs e)
-        {
-            //if ((User_name1.Text == TestUsers[0].Username && PasswordBox.Password == TestUsers[0].Pw) || (User_name1.Text == TestUsers[1].Username && PasswordBox.Password == TestUsers[1].Pw))
-            if ((User_name1.Text == TestUsers[0].Username && PasswordBox.Password == TestUsers[0].Pw) || (User_name1.Text == TestUsers[1].Username && PasswordBox.Password == TestUsers[1].Pw))
+        {   
+            int x = Studenten.FindIndex((Item => Item.Name == User_name1.Text && Item.Pw == PasswordBox.Password));
+            if (x != -1)
             {
                 MessageBox.Show("succsessfully logged in", "Result", MessageBoxButton.OK, MessageBoxImage.Information);
+                Page2 p2 = new Page2(Studenten[x], allCourses);
+                this.Hide();
+                p2.Show();
+
+                //for (int i = 0; i < allCourses.Length; i++)
+                //{
+                //    cbx_availableCourses.Items.Add(allCourses[i]);
+                //}
             }
             else
             {
-                MessageBox.Show("wrong Username or Password!", "Result", MessageBoxButton.OKCancel, MessageBoxImage.Error);
+                MessageBox.Show("wrong Username or Password!", "Result", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
     }

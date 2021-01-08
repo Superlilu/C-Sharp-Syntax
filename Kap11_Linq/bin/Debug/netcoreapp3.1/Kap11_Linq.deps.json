@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "Kap11_Linq/1.0.0": {
+        "runtime": {
+          "Kap11_Linq.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Kap11_Linq/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

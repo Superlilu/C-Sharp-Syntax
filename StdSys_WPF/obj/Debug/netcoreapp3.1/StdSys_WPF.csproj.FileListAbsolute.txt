@@ -17,3 +17,5 @@ D:\C-Sharp-Syntax\StdSys_WPF\bin\Debug\netcoreapp3.1\StdSys_WPF.runtimeconfig.de
 D:\C-Sharp-Syntax\StdSys_WPF\bin\Debug\netcoreapp3.1\StdSys_WPF.pdb
 D:\C-Sharp-Syntax\StdSys_WPF\obj\Debug\netcoreapp3.1\StdSys_WPF.csprojAssemblyReference.cache
 D:\C-Sharp-Syntax\StdSys_WPF\obj\Debug\netcoreapp3.1\StdSys_WPF.genruntimeconfig.cache
+D:\C-Sharp-Syntax\StdSys_WPF\obj\Debug\netcoreapp3.1\Page2.g.cs
+D:\C-Sharp-Syntax\StdSys_WPF\obj\Debug\netcoreapp3.1\Page2.baml

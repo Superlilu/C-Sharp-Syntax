@@ -1,0 +1,13 @@
+D:\C-Sharp-Syntax\Kap11_Linq\bin\Debug\netcoreapp3.1\Kap11_Linq.exe
+D:\C-Sharp-Syntax\Kap11_Linq\bin\Debug\netcoreapp3.1\Kap11_Linq.deps.json
+D:\C-Sharp-Syntax\Kap11_Linq\bin\Debug\netcoreapp3.1\Kap11_Linq.runtimeconfig.json
+D:\C-Sharp-Syntax\Kap11_Linq\bin\Debug\netcoreapp3.1\Kap11_Linq.runtimeconfig.dev.json
+D:\C-Sharp-Syntax\Kap11_Linq\bin\Debug\netcoreapp3.1\Kap11_Linq.dll
+D:\C-Sharp-Syntax\Kap11_Linq\bin\Debug\netcoreapp3.1\Kap11_Linq.pdb
+D:\C-Sharp-Syntax\Kap11_Linq\obj\Debug\netcoreapp3.1\Kap11_Linq.csprojAssemblyReference.cache
+D:\C-Sharp-Syntax\Kap11_Linq\obj\Debug\netcoreapp3.1\Kap11_Linq.AssemblyInfoInputs.cache
+D:\C-Sharp-Syntax\Kap11_Linq\obj\Debug\netcoreapp3.1\Kap11_Linq.AssemblyInfo.cs
+D:\C-Sharp-Syntax\Kap11_Linq\obj\Debug\netcoreapp3.1\Kap11_Linq.csproj.CoreCompileInputs.cache
+D:\C-Sharp-Syntax\Kap11_Linq\obj\Debug\netcoreapp3.1\Kap11_Linq.dll
+D:\C-Sharp-Syntax\Kap11_Linq\obj\Debug\netcoreapp3.1\Kap11_Linq.pdb
+D:\C-Sharp-Syntax\Kap11_Linq\obj\Debug\netcoreapp3.1\Kap11_Linq.genruntimeconfig.cache
