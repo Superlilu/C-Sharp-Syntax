@@ -3,3 +3,8 @@ w3r_practice/bin
 w3r_practice/obj
 w3r_practice/w3r_practice.csproj
 w3r_practice/w3r_practice.sln
+*/obj/*
+*/.vs/*
+
+
+
