@@ -26,6 +26,7 @@ namespace StdSys_WPF
             {
                 cbx_TeacherList.Items.Add(c);
             }
+            // here is a alternative foreach loop to the former for loop
             for (int i = 0; i < teachers.Count; i++)
             {
                 for (int j = 0; j < allCourses.Count; j++)
@@ -56,6 +57,7 @@ namespace StdSys_WPF
             object selected_orig = cbx_TeacherList.SelectedItem;
             Teacher selected = (Teacher)selected_orig;
             lbx_CoursesPerTeacher.Items.Clear();
+            // here is the alternative foreach loop to the former for loop
             for (int i = 0; i < selected.CoursesPerTeacher.Count; i++)
             {
                 lbx_CoursesPerTeacher.Items.Add(selected.CoursesPerTeacher[i]);
@@ -65,6 +67,7 @@ namespace StdSys_WPF
         private void cbx_CourseList_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             lbx_StdInCourse.Items.Clear();
+            // the unnecessary object is deleted
             object selected_ori = cbx_CourseList.SelectedItem;
             Courses selected = (Courses)selected_ori;
 
